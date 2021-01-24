@@ -38,6 +38,6 @@ app.get('/', requireAuth, (req, res) => {
     res.send(`Your email: ${req.user.email}`);
 });
 
-app.listen(3000, () => {
-    console.log('Listening on port 3000');
+app.listen(process.env.PORT || 5000, () => {
+    console.log('Correctly listening on port');
 });
